@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 474.65 523.16">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: #fff;
+        stroke: #000;
+        stroke-miterlimit: 10;
+        stroke-width: 17.71px;
+      }
+    </style>
+  </defs>
+  <g id="home">
+    <rect class="cls-1" width="474.65" height="523.16"/>
+    <g id="second_damage">
+      <polyline class="cls-2" points="326.9 202.47 372.76 125.36 372.76 55.39"/>
+      <polygon id="cross_damage" points="107.41 318.78 84.28 306.77 75.71 340.49 48.21 320.22 39.96 340.6 68.78 363.83 64.17 396.51 81.65 417.13 87.84 375.51 119.93 410.29 131.25 377.74 94.57 351.95 107.41 318.78"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <h1>卵打-タイピングゲーム</h1>
+    </header>
+    <div id="mid_section">
+        <nav>left</nav>
+        <main>
+        <div id="Game">
+            <div class="GameScr">
+                <div>
+                    <div id="fragment_eff" class="fragment_none">
+                        <img src="fragment.svg">
+                    </div>
+                </div>
+                <div id="scatter_eff"></div>
+                <div id="egg_st_animation"></div>
+                <img src="./src/bg/start_bg.svg" id="start_bg">
+                <div id="egg_move" class="egg_alw_move"></div>
+                <button id="GameStart" class="game_start_btn">スタート<div class="game_s_btn_bg_trim"><img src="./src/eggs/start_btn_hover.svg" class="btn_hover_svg"></div></button>
+                
+                <div id="play_scr">
+                    <div id="around_info">
+                        <div class="bonus_bar_animation"></div>
+                        <img src="./src/play_scr/bonus_bar.svg" alt="ボーナスモードの数値バー">
+                        <img src="./src/play_scr/scr_board.svg" alt="スコアバー">
+                        <img src="./src/play_scr/top_liquid.svg" alt="黄身" id="yolk_liquid">
+                        <div></div>
+
+                        <div class="texts">
+                            <p>今日はとてもいい天気ですね</p>
+                            <p>きょうはとてもいい天気ですね</p>
+                            <p>kyouhatotemoiitenkidesune</p>
+                            <p>300</p>
+                            <p>3.2</p>
+                            <p>2時間</p>
+                            <p>2000</p>
+                        </div>
+                    </div>
+
+                    <!-- <div id="first_countdown">
+                        <div></div>
+                    </div> -->
+
+                    <div id="play_slctMenu">
+                        <p id="mode_txt">練習</p>
+                        <div id="mode_Mvright_btn_area"><div id="mode_Mvright_btn"></div></div>
+                        <div id="mode_Mvleft_btn_area"><div id="mode_Mvleft_btn"></div></div>
+                        
+                        <div id="play_btns">
+                            <div><button id="stop_try">中止する</button></div>
+                            <div><button id="new_try">挑戦する</button></div>
+                            <div><button id="start_retry">再開する</button></div>
+                        </div>
+        
+                        <div class="select_mode_frame" id="select_mode_mv">
+                            <img src="./src/eggs/very-hard/1.svg" alt="たまご(超)" class="eggs">
+                            <img src="./src/eggs/devil/1.svg" alt="たまご(地)" class="eggs">
+                            <img src="./src/eggs/egg.svg" alt="たまご(練習)" class="eggs">
+                            <img src="./src/eggs/easy/1.svg" alt="たまご(初)" class="eggs">
+                            <img src="./src/eggs/noramal/1.svg" alt="たまご(中)" class="eggs">
+                            <img src="./src/eggs/hard/1.svg" alt="たまご(上)" class="eggs">
+                        </div>
+                        <div>
+                            <img src="./src/eggs/devil/1.svg" class="selected_egg">
+                        </div>
+                    </div>
+                    <!-- リザルト画面 -->
+                    <container class="result_display">
+                        <div class="result_nums1">
+                            <p>2時間30分で</p>
+                            <p>地獄級</p>
+                            <p>クリア！</p>
+                        </div>
+                        <div class="image_bg">
+                            <img src="./src/result_bg/easy.svg" alt="背景" class="">
+                        </div>
+
+                        <div class="result_nums2">
+                            <div><p>403EXP</p></div>
+                            <div><p>29回</p></div>
+                            <div><p>0.3</p></div>
+                        </div>
+                    </container>
+
+                </div>
+
+                <div id="ranking_scr" class="ranking_scr">
+                    <h3>ランキング</h3>
+                    <div id="records_frame">
+                        <div>
+                            <div></div>
+                            <p>あ武の涙と共に息るた Lv35</p>
+                            <span>クリア時間<span>2時間40分</span></span>
+                            <span>平均タイプ数 : <span>2.4</span></span>
+                            <span>ミスタイプ数 : <span>302</span></span>
+                            <img src="./src/bg/ranking_line.svg">
+                            <span>1</span>
+                        </div>
+                        <div>
+                            <div></div>
+                            <p>まる Lv35</p>
+                            <span>クリア時間<span>2時間40分</span></span>
+                            <span>平均タイプ数 : <span>2.4</span></span>
+                            <span>ミスタイプ数 : <span>302</span></span>
+                            <img src="./src/bg/ranking_line.svg">
+                            <span>2</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="skin_scr" class="skin_scr">
+                    <h3>キャラ着せ替え</h3>
+                    <div id="circle_base"></div>
+
+                    <div id="circle_shadow"></div>
+
+                    <div id="character_base">
+                        <div id="character_accesary"></div>
+                        <div id="character_hat"></div>
+                    </div>
+                    <!-- <img src="./src/character_create/base_outer.svg" alt="ベース" class="character_parts"> -->
+                    <!-- <img src="./src/character_create/eye/1.svg" alt="メガネ" class="character_parts" id="character_eye">
+                    <img src="./src/character_create/hat/1.svg" alt="帽子" class="character_parts" id="character_hat"> -->
+                    <!-- 帽子 or メガネ 選択 -->
+                    <div id="now_hat_border"><button id="now_hat_btn"></button></div>
+                    <div id="now_accesary_border"><button id="now_accesary_btn"></button></div>
+
+                    <!-- アイテム選択ウィンドウ -->
+                    <div class="skin_selectArea_border">
+                        <div class="skin_selectArea">
+                            <div id="accesarys">
+                                <button class="skin_accesary" data-accesarybtns="0"></button>
+                                <button class="skin_accesary" data-accesarybtns="1"></button>
+                                <button class="skin_accesary" data-accesarybtns="2"></button>
+                                <button class="skin_accesary" data-accesarybtns="3"></button>
+                                <button class="skin_accesary" data-accesarybtns="4"></button>
+                                <button class="skin_accesary" data-accesarybtns="5"></button>
+                                <button class="skin_accesary" data-accesarybtns="6"></button>
+                                <button class="skin_accesary" data-accesarybtns="7"></button>
+                                <button class="skin_accesary" data-accesarybtns="8"></button>
+                                <button class="skin_accesary" data-accesarybtns="9"></button>
+                                <button class="skin_accesary" data-accesarybtns="10"></button>
+                                <button class="skin_accesary" data-accesarybtns="11"></button>
+                                <button class="skin_accesary" data-accesarybtns="12"></button>
+                                <button class="skin_accesary" data-accesarybtns="13"></button>
+                                <button class="skin_accesary" data-accesarybtns="14"></button>
+                                <button class="skin_accesary" data-accesarybtns="15"></button>
+                                <button class="skin_accesary" data-accesarybtns="16"></button>
+                                <button class="skin_accesary" data-accesarybtns="17"></button>
+                                <button class="skin_accesary" data-accesarybtns="18"></button>
+                                <button class="skin_accesary" data-accesarybtns="19"></button>
+                                <button class="skin_accesary" data-accesarybtns="20"></button>
+                                <button class="skin_accesary" data-accesarybtns="21"></button>
+                                <button class="skin_accesary" data-accesarybtns="22"></button>
+                                <button class="skin_accesary" data-accesarybtns="23"></button>
+                                <button class="skin_accesary" data-accesarybtns="24"></button>
+                                <button class="skin_accesary" data-accesarybtns="25"></button>
+                            </div>
+                            <div id="hats">
+                                <button class="skin_hat" data-hatbtns="0"></button>
+                                <button class="skin_hat" data-hatbtns="1"></button>
+                                <button class="skin_hat" data-hatbtns="2"></button>
+                                <button class="skin_hat" data-hatbtns="3"></button>
+                                <button class="skin_hat" data-hatbtns="4"></button>
+                                <button class="skin_hat" data-hatbtns="5"></button>
+                                <button class="skin_hat" data-hatbtns="6"></button>
+                                <button class="skin_hat" data-hatbtns="7"></button>
+                                <button class="skin_hat" data-hatbtns="8"></button>
+                                <button class="skin_hat" data-hatbtns="9"></button>
+                                <button class="skin_hat" data-hatbtns="10"></button>
+                                <button class="skin_hat" data-hatbtns="11"></button>
+                                <button class="skin_hat" data-hatbtns="12"></button>
+                                <button class="skin_hat" data-hatbtns="13"></button>
+                                <button class="skin_hat" data-hatbtns="14"></button>
+                                <button class="skin_hat" data-hatbtns="15"></button>
+                                <button class="skin_hat" data-hatbtns="16"></button>
+                                <button class="skin_hat" data-hatbtns="17"></button>
+                                <button class="skin_hat" data-hatbtns="18"></button>
+                                <button class="skin_hat" data-hatbtns="19"></button>
+                                <button class="skin_hat" data-hatbtns="20"></button>
+                                <button class="skin_hat" data-hatbtns="21"></button>
+                                <button class="skin_hat" data-hatbtns="22"></button>
+                                <button class="skin_hat" data-hatbtns="23"></button>
+                                <button class="skin_hat" data-hatbtns="24"></button>
+                                <button class="skin_hat" data-hatbtns="25"></button>
+                                <button class="skin_hat" data-hatbtns="26"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- アイテム説明 -->
+                    <div id="explain_item">
+                         <p alt="アイテム名" id="item_name"></p>
+                         <p alt="アイテム説明" id="about_item"></p>
+                    </div>
+
+                </div>
+
+                <div id="account_scr" class="account_scr">
+                    <div id="account_UN">------</div>
+                    <div id="account_icon"></div>
+                    <div id="exp_bar" class="exp_bar"></div>
+                    <div id="account_level">Lv---</div>
+                    <img class="account_board" src="./src/account_menu/board_login.svg">
+                    <button class="account_register" id="create_accountbtn">アカウント<br>を新規作成</button>
+                    <button class="account_register" id="login_accountbtn">ログインする</button>
+                </div>
+            </div>
+            <div class="Game_Footer" >
+                <button class="select_menu" data-footerbtns="D-play"><p style="font-size: 1.3rem; left: 35px; top: 490px;">プレイ</p><img src="./src/eggs/egg.svg" style="width: 60%;" alt="プレイボタンのアイコン"></button>
+                <button class="select_menu" data-footerbtns="D-ranking"><p style="font-size: 1.3rem; left: 135px; top: 490px;">ランキング</p><img src="./src/footer/ranking_icon.svg" style="width: 80%;" alt="ランキングのアイコン"></button>
+                <button class="select_menu" data-footerbtns="D-skin"><p style="font-size: 1.0rem; left: 255px; top: 493px;">キャラ着せ替え</p></button>
+                <button class="select_menu" data-footerbtns="D-account"><p style="font-size: 1.1rem; left: 395px; top: 493px;">アカウント</p><img src="./src/footer/account_icon.svg" style="width: 50%;" alt="アカウントボタンのアイコン"></button>
+            </div>
+        </div>
+        </main>
+        <aside>right</aside>
+        </div>
+    </div>
+    <footer>footer</footer>
+    <script src="./script.js"></script>
+</body>
+</html>
